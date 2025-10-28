@@ -1,6 +1,6 @@
 # mssgpie
 
-Django 4.2 LTS starter project for message parsing and categorization.
+Message parsing and categorization application built with Django 4.2 LTS.
 
 ## Tech Stack
 - Python 3.11+
