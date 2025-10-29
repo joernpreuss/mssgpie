@@ -27,11 +27,12 @@ cp .env.example .env
 # Edit .env with your database credentials and secret key
 ```
 
-### 4. Database Setup
-Create a PostgreSQL database:
+### 4. Start PostgreSQL (Docker)
 ```bash
-createdb mssgpie
+docker-compose up -d
 ```
+
+The database will be available at `localhost:5432` with credentials from docker-compose.yml.
 
 ### 5. Run Migrations
 ```bash
