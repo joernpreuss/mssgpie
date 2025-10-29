@@ -1,3 +1,13 @@
-from django.shortcuts import render
+from django.views.generic import ListView, DetailView
+from .models import Message
 
-# Create your views here.
+
+class MessageListView(ListView):
+    model = Message
+    context_object_name = 'messages'
+    paginate_by = 20
+
+
+class MessageDetailView(DetailView):
+    model = Message
+    context_object_name = 'message'

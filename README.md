@@ -50,6 +50,33 @@ uv run python manage.py runserver
 
 Access the admin panel at: http://localhost:8000/admin/
 
+## API Endpoints
+
+### Messages
+- `GET /messages/` - List all messages (paginated, 20 per page)
+- `GET /messages/<id>/` - Message detail view
+
+### Admin
+- `/admin/` - Django admin interface for managing messages and categories
+
+## Project Structure
+
+```
+mssgpie/
+├── mssgpie/          # Django project settings
+│   ├── settings.py   # Main configuration (uses django-environ)
+│   ├── urls.py       # Root URL configuration
+│   └── wsgi.py       # WSGI configuration
+├── messages/         # Messages Django app
+│   ├── models.py     # Message and Category models
+│   ├── views.py      # ListView and DetailView for messages
+│   ├── admin.py      # Admin configuration
+│   └── urls.py       # App URL patterns
+├── manage.py         # Django management script
+├── pyproject.toml    # Project dependencies
+└── .env              # Environment variables (not in git)
+```
+
 ## Development
 
-More documentation coming soon...
+For more details, see [SPEC.md](SPEC.md).
